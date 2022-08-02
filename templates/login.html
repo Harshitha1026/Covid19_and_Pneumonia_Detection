@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+<style>
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09-Apr-2022, 12:09:07 pm
+    Author     : HARSHITHA
+*/
+
+body
+{
+	margin: 0;
+	padding: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),url(../static/image/5.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	font-family: Century Gothic;
+}
+input[type='submit']{
+            cursor:pointer;
+        }
+button{
+            cursor:pointer;
+        }
+.loginbox
+{
+	width: 320px;
+	height: 380px;
+	background-color: #000000b3;
+	color: #fff;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.profile
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+h1
+{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+
+
+}
+.loginbox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+.loginbox input[type="text"],input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background-color: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+
+}
+.loginbox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background-color: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	transition: 0.4s ease;
+
+}
+.loginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background-color: #ffc107;
+	color: #000;
+
+}
+.loginbox a
+{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+	transition: 0.4s ease;
+}
+.loginbox a:hover
+{
+	color: #ffc107;
+}
+
+/*change password*/
+.changepassword
+{
+	width: 320px;
+	height: 380px;
+	background-color: #000000b3;
+	color: #fff;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+    padding: 35px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+h2
+{
+	margin:0;
+	padding: 0 0 20px;
+	text-align: center;
+
+
+}
+.changepassword input
+{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+.changepassword input[type="password"], input[type="text"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background-color: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+
+}
+.changepassword input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background-color: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	transition: 0.4s ease;
+
+}
+.changepassword input[type="submit"]:hover
+{
+	cursor: pointer;
+	background-color: #ffc107;
+	color: #000;
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+	<div class="loginbox">
+		<img src="../static/image/profile.png" class="profile">
+
+		<h1>Login</h1>
+		<form name="passdata" method="POST" action="/form_login">
+			<input type="text" autocomplete="off" placeholder="Enter Registration Number" name="id" required>
+			<input type="password" placeholder="Enter password" name="password" required>
+			<input type="submit"   value="Login">
+			<!--<a href="changePassword.html"><strong>Forgot password ?</strong></a>-->
+		</form>
+		
+			<a href="{{url_for('form_password')}}"><strong>Forgot password ?</strong></a>
+			
+
+
+		
+			
+		
+
+	</div>
+<h1 id="msg" style="color:red">{{info}}</h1>
+	
+</body>
+
+</html>

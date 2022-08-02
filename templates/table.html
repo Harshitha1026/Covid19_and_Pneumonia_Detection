@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patient Details</title>
+      <style>
+      body
+{
+	
+    background:linear-gradient(45deg, #2ade10, white);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+}
+input[type='submit']{
+            cursor:pointer;
+        }
+button{
+            cursor:pointer;
+        }
+h1{
+    text-align:center;
+    color:blue;
+    padding:10px;
+   }
+a{
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 20px;
+	color: red;
+	transition: 0.4s ease;
+    margin-right:20px;
+    padding-bottom:20px;
+}
+
+table{
+    border:2px solid black;
+    border-collapse:collapse;
+    }
+table tr, table td, table th{
+    border:1px solid black;
+    border-collapse:collapse;
+    text-align:center;
+    }
+table td, th{
+    width:150px;
+          }
+ table th{
+     height:30px;
+     background-color:wheat;
+     font-weight:bold;
+          }
+ table td{
+     background-color:white;
+          }     
+button{
+    display:block;
+    width:120px;
+    height:50px;
+    border-radius:10px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:18px;
+    font-weight:bold;
+    color:#FFF;
+    background:#5c0e18;
+    }
+     .form{
+         width:100%;
+         height:200px;
+         background-color:wheat;
+         padding-top:10px;
+         margin-top:20px;
+          }
+    form{
+        display:inline-block;
+        padding:20px;
+          }
+    p{
+        padding-top:20px;
+        text-align:center;
+        font-size:24px;
+        color:red;
+        font-weight:bold;
+        
+          }
+          h3{
+            font-family: sans-serif;
+            font-size: 28px;              
+          }
+          
+
+      </style>  
+  </head>
+  <body>
+     <a href="{{url_for('index')}}"><strong>Back</strong></a>
+    <h1>Patient Details</h1>
+    <div align="center">
+      <table>
+        <h1>
+        <!--Displaying the converted table-->
+          {% for table in tables %}
+          <h2>{{titles[loop.index]}}</h2>              
+          {{ table|safe }}
+          {% endfor %}  
+        </h1>
+      </table>
+    </div>
+      <div class="form">
+          <div align="center">
+          <h3>Get the count</h3>
+     <form action="/c" method="POST" enctype="multipart/form-data">
+            <button>Covid</button>
+        </form>
+        <form action="/n" method="POST" enctype="multipart/form-data">
+            <button>Normal</button>         
+        </form>
+        <form action="/p" method="POST" enctype="multipart/form-data"> 
+            <button>Pneumonia</button>
+        </form>
+           </div>
+      </div>
+    <p>{{r}}</p>
+  </body>
+</html>

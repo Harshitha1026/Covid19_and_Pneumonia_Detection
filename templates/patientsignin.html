@@ -1,0 +1,123 @@
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+     <title>Sign In</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          *{
+    margin: 0;
+    padding: 0;
+    
+    }
+    body{
+        /*background-color: rgb(4,29,49);*/
+        width: 100%;
+        /*height: 20vh;*/
+        background-color:#79f7cb;
+        background-position: center;
+        background-size: cover;
+    }
+    input[type='submit']{
+            cursor:pointer;
+        }
+        button{
+            cursor:pointer;
+        }
+    .box{
+        
+          position: absolute;
+          top: 50%;
+        margin-left:37%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+   
+        width:400px;
+        height:250px;
+        background-color:wheat;
+        border:2px solid ;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+        border-radius:5px;
+         }
+      h3{
+          text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+    padding-bottom: 20px;
+         }
+         form{
+             padding-top:20px;
+         }
+         form h4{
+             text-align: left;
+            padding-left: 45px;
+            padding-bottom: 20px
+         }
+         form input[type="email"]{
+             width: 300px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 7px;
+            margin-left: 45px;
+         }
+         /*form input[type="submit"]{*/
+         button{
+            width: 100px;
+            height: 30px;
+            margin-top: 15px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: lime;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 145px
+
+         }
+
+         
+        /* form input[type="submit"]:hover{*/
+         button:hover{
+             cursor:pointer;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+         }
+         
+            a
+            {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 20px;
+                color: black;
+                transition: 0.4s ease;
+                text-align:center;
+                margin-left:45px;
+            }
+            a:hover
+            {
+                color: red;
+            }
+         
+         
+     </style>
+ </head>  
+ <body> 
+  <div class="box">
+      <h3>Patient Sign In</h3>
+     <form action = "/signin" method = "POST">  
+         <h4>Email address:</h4> 
+         <input type="email" autocomplete="off" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">  <br>
+          <button id="btn1" type="submit" class="submit">Login</button><br>
+         <a href="{{url_for('details')}}"><strong>Register..</strong></a>
+       <!-- <input id = "btn1" type = "submit" value="Submit">-->
+     </form> 
+    </div>
+    <h2 style="text-align:center;color:red;margin-top:40%">{{i}}</h2>
+     <script>
+         const btn = document.getElementById('btn1');
+            btn.addEventListener('click', function handleClick() {
+                  const initialText = 'Predict';
+                 btn.innerHTML = `<span style="bacground:black;">Loading...</span>`; 
+            }); 
+     </script>
+ </body>  
+ </html> 

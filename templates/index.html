@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Covid-19 & Pneumonia Detection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+        <style>
+            input[type='submit']{
+                cursor:pointer;
+            }
+            button{
+                cursor:pointer;
+            }
+            .main{
+                width:100%;
+                background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%),url(../static/image/4.jpg);
+                background-position: center;
+                background-size: cover;
+                height: 100vh;
+            }
+            .menu{
+                width:680px;
+                float:right;
+            }
+            ul{
+                margin-left:250px;
+            }
+            
+            #detect{
+               /* background: linear-gradient(45deg, #121010, #f2f5f600);*/
+                background:linear-gradient(45deg, gray, white);
+
+            }
+            .content button{
+                font-size: 18px;
+            }
+            
+            .content a
+            {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 20px;
+                color: white;
+                transition: 0.4s ease;
+            }
+            .content a:hover
+            {
+                color: #ffc107;
+            }
+            .content .exists
+            {
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 20px;
+                color: white;
+                transition: 0.4s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">Stay safe</h2>
+                </div> 
+                <div class="menu">
+                     <ul>
+                        <!--<li><a href="{{url_for('index')}}">Home</a></li>-->
+                        <!--<li><a href="#detect">Detection Steps</a></li>-->
+                        <li><a href="{{url_for('model')}}">Model Details</a></li>
+                        <li><a href="{{url_for('table')}}">View Details</a></li>
+                        <li><a href="{{url_for('logout')}}">Logout</a></li>
+                    </ul>
+                </div>
+                <!--<div class="search">
+                    <input class="srch" type="search" name="search" placeholder="Type to text">
+                    <a href="#"><button class="btn">Search</button></a>
+                </div>-->
+            </div>
+            <div class="content">
+                <h1>Diagnosis Of <span>Covid-19</span> And<span> Pneumonia</span><br>From Chest X-Ray Images</h1>
+                <p class="par"></p>
+
+                    <button class="cn"><a href="{{url_for('details')}}">Register Patient</a></button><br>
+                    <span class='exists'>Already Existing Patient? <span><a href="{{url_for('existpatient')}}"><strong>Sign In</strong></a>
+            </div>
+        </div>
+        
+        <!-- working section starts -->
+
+        <section class="detect" id="detect" >
+
+            <h1 class="heading" style="padding-top:3rem; padding-bottom:3rem;">How system knows about your disease<span> positive</span> status?</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h2>STEP 1</h2>
+                    <img src="../static/image/patientregistration.jpg" alt="">
+                    <h3>Registration</h3>
+                    <p>Patient is registered with all required details</p>
+                </div>
+
+                <div class="box">
+                    <h2>STEP 2</h2>
+                    <img src="../static/image/chestxray.jpg" alt="">
+                    <h3>Collect Sample</h3>
+                    <p>Patient chest X-Ray is collected</p>
+                   
+                </div>
+
+                <div class="box">
+                    <h2>STEP 3</h2>
+                    <img src="../static/image/analysis.jfif" alt="">
+                    <h3>Analysis</h3>
+                    <p>X-ray is uploaded to the system for analysis</p>
+                    
+                </div>
+                
+                <div class="box">
+                    <h2>STEP 4</h2>
+                    <img src="../static/image/result.jpg" alt="">
+                    <h3>Result</h3>
+                    <p>Analyzed result is shown on the screen</p>
+                    
+                </div>
+                
+                <div class="box">
+                    <h2>STEP 5</h2>
+                    <img src="../static/image/share.png" alt="">
+                    <h3>Share</h3>
+                    <p>The result is shared to patient and hospital</p>
+                    
+                </div>
+
+            </div>
+            <div class="knowmore">
+            <h3>Know more about the model?</h3><a href="{{url_for('model')}}" class="button">Click Here</a>
+            </div>
+
+        </section>
+        <!-- working section ends -->
+
+        
+        
+         <!-- footer section starts  -->
+
+        <section class="footer">
+
+            <div class="box-container">
+
+               <!-- <div class="box">
+                    <h3>Services</h3>
+                    <a href="#">Register</a>
+                    <a href="#">Know about doctors</a>
+                    <a href="#">Book slot</a>
+                    <a href="#">Manage appointment</a>
+                    <a href="#">services available</a>
+
+                </div>
+
+                <div class="box">
+                    <h3>Resources</h3>
+                    <a href="#">How to detect</a>
+                    <a href="#">Dos and dont's</a>
+                    <a href="#">overview</a>
+                    <a href="#">Guidelines</a>
+                    <a href="#">centers</a>
+
+                </div>-->
+
+                <div class="box" style="margin-left:400px;">
+                    <h3>Quick Links</h3>
+                    <a href="{{url_for('index')}}">Home</a>
+                    <a href="#detect">Detection steps</a>
+                    <a href="{{url_for('model')}}">Model Details</a>
+                    <a href="{{url_for('table')}}">View Details</a>
+                    <a href="{{url_for('logout')}}">logout</a>
+                </div>
+
+                <div class="box">
+                    <h3>Contact Info</h3>
+                    <p> <i class="fas fa-phone"></i> +918861826144. </p>
+                    <p> <i class="fas fa-envelope"></i> covid19protection@gmail.com </p>
+                    <p> <i class="fas fa-map-marker-alt"></i> Puttur, India - 574203. </p>
+                   <!-- <div class="share">
+                        <a href="#" class="fab fa-youtube"></a>
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>-->
+                </div>
+
+            </div>
+
+            <p class="credit"> Copyright &#169; 2022 Stay safe. All rights reserved</p>
+
+        </section>
+
+        <!-- footer section ends -->   
+    
+        
+        
+        
+        
+    </body>
+    
+    
+</html>

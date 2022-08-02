@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Model Details</title>
+<style>
+/* *{
+    margin:0;
+    padding: 0;
+    
+} */
+
+body{
+    width:100%;
+    height: 100vh;
+    background-color:wheat;
+    overflow-x:hidden;
+}
+input[type='submit']{
+            cursor:pointer;
+        }
+button{
+            cursor:pointer;
+        }
+h1{
+    text-align:center;
+    color:red;
+    padding:10px;
+   }
+h2{
+    text-align:center;
+    padding-bottom:-3px;
+    }
+h3{
+    padding:7px;
+    text-align:center;
+    }
+ul{
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    }
+li{
+    padding:5px;
+    }   
+#table1{
+    width:70%;
+    height:300px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid black;
+    border-collapse:collapse;
+    }
+#table1 tr, #table1 td, #table1 th{
+    border:1px solid black;
+    border-collapse:collapse;
+    text-align:center;
+    }
+#table1 td, th{
+    width:90px;
+    }
+img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+    height:250px;
+    padding:10px;
+    }
+ #table2{
+    margin-left:auto;
+    margin-right:auto;
+     border-width:0;
+    }
+ #table2 th, td{
+     border-width:0;
+    }
+  #table2 h4{
+    text-align:center;
+    }
+    a{
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 20px;
+	color: red;
+	transition: 0.4s ease;
+    margin-right:20px;
+    padding-bottom:20px;
+}
+</style>
+</head>
+<body>
+    <a href="{{url_for('index')}}" style="color:red; text-decoration:none;"><strong>Back</strong></a>
+    <h1>Model Details</h1>
+    <h2>Different Architectures Compared</h2>
+    <ul>
+        <li>ResNet50</li>
+        <li>ResNet101</li>
+        <li>VGG-16</li>
+        <li>VGG-19</li>
+    </ul>
+    <section class="arctecture">
+        <h3>Accuracy of different Architechure:</h3>
+        <table id="table1">
+          <tr>
+              <th width="80%">Architectures</th>
+              <th>Training</th>
+              <th>Testing</th>
+              <th>Validation</th>
+            </tr>
+            <tr>
+                <td>ResNet-50</td>
+                <td>95.85%</td>
+                 <td>93.26%</td>
+                <td>94.14%</td>
+
+            </tr>
+            <tr>
+                <td>ResNet-101</td>
+                <td>93.93%</td>
+                 <td>92.78%</td>
+                <td>93.55%</td>
+            </tr>
+            <tr>
+                <td>VGG-16</td>
+                <td>93.45%</td>
+                 <td>89.42%</td>
+                <td>91.79%</td>
+            </tr>
+            <tr>
+                <td>VGG-19</td>
+                <td>93.54%</td>
+                 <td>90.86%</td>
+                <td>89.94%</td>
+            </tr>
+        </table>
+        <h3>Architectures V/S Accuracy</h3>
+                <img src="../static/image/architecture.png" class="image" style="width:500px;height:300px;"> 
+    </section>
+    <section>
+        <h2>About ResNet50</h2>
+        <table id="table2">
+            <tr>
+                <td>
+                 <h4>Accuracy Graph</h4>
+                <img src="../static/image/accuracy.png" class="image"> 
+                </td>
+                <td>
+                    <h4>Loss Graph</h4>
+                <img src="../static/image/loss.png" class="image">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Confusion Matrix</h4>
+                <img src="../static/image/confusion.png" class="image">
+                </td>
+                <td>
+                    <h4>Classification Report</h4>
+                <img src="../static/image/classification.png" class="image">
+                </td>
+            </tr>
+        </table>
+    </section>
+   
+    
+</body>

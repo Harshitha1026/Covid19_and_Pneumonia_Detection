@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+ <html>  
+ <head>  
+     <title>OTP Verification</title>
+     <style>
+          *{
+    margin: 0;
+    padding: 0;
+    
+    }
+    body{
+        /*background-color: rgb(4,29,49);*/
+        width: 100%;
+        height: 100vh;
+        background-color:#79f7cb;
+        background-position: center;
+        background-size: cover;
+    }
+     input[type='submit']{
+            cursor:pointer;
+        }
+        button{
+            cursor:pointer;
+        }
+    .box{
+        
+          position: absolute;
+          top: 50%;
+        margin-left:27.5%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+   
+        width:680px;
+        height:250px;
+        background-color:wheat;
+        border:2px solid ;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+        border-radius:5px;
+         }
+      form h4{
+          padding-top: 18px;
+            margin-left: 60px
+         }
+         form{
+            padding-top: 30px;
+                height: 80% ;
+         }
+         form h3{
+             text-align: center;
+            padding-bottom: 25px;
+         }
+         form input[type="text"]{
+            width: 400px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 7px;
+            margin-left: 60px;
+            margin-top: 20px
+         }
+        form input[type="submit"]{
+            width: 100px;
+            height: 30px;
+            margin-top: 25px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: lime;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 300px
+
+         }
+
+         
+         form input[type="submit"]:hover{
+             cursor:pointer;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+         }    
+    
+        
+     </style>
+ </head>  
+   <body>  
+   <div class="box">
+          <form action = "/validateemail" method="post">   
+         <h3> OTP has been sent to the E-mail ID. Please check the email for the confirmation.</h3>  
+         <h4>Enter OTP(One-time password): </h4>
+             <input type="text" autocomplete="off" name="otp"><br>
+
+         <input type="submit" value="Submit">  
+         </form>  
+       </div>
+       <h1 id="msg" style="color:red; margin-left: 37%; margin-top: 40%;">{{info}}</h1>
+
+ </body>  
+ </html>   

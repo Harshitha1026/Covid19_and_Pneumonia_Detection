@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protection form disease</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel = "stylesheet" href = "{{url_for('static', filename='css/homeprotect.css')}}">
+    <style>
+        *{
+    text-transform: None;
+        }
+        input[type='submit']{
+            cursor:pointer;
+        }
+        button{
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+<!-- header section starts  -->
+<body>
+<header>
+
+    <!--<a href="#" class="logo">c<span class="fas fa-virus"></span>ovid-19</a>-->
+    <a href = "#" class = "logo">
+           <h2>Stay Safe</h2>
+    </a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a  href="{{url_for('home')}}">Home</a></li>
+            
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+<!-- Protection section starts -->
+
+<section class="protect" id="protect" style="padding-top:150px;" >
+
+    <h1 class="heading">Take steps to <span>protect</span> yourself</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../static/image/wearmask.jpg" alt="">
+            <h3>Wear a face mask</h3>
+            <p>Masks should be used as part of a comprehensive strategy of measures to suppress transmission of virus and save lives</p>
+            <p>Wear a mask with the best fit, protection, and comfort for you.</p>
+            <p>If you are sick and need to be around others, or are caring for someone who has disease, wear a mask.</p>
+            <!--<a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" class="btn">learn more</a>-->
+        </div>
+
+        <div class="box">
+            <img src="../static/image/washhands.jpg" alt="">
+            <h3>Wash your hands</h3>
+            <p>Washing hands can keep you healthy and prevent the spread of respiratory and diarrheal infections.</p>
+            <p>Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, after sneezing.</p>
+            <p>Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+           <!-- <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" class="btn">learn more</a>-->
+        </div>
+
+        <div class="box">
+            <img src="../static/image/distance.png" alt="">
+            <h3>Avoid close contact</h3>
+            <p>Avoid close contact with people who are sick. Maintain 6 feet distance between the person who is sick and other household members.</p>
+            <p>Keeping distance from others is especially important for people who are at higher risk of getting very sick.</p>
+            <p>Remember that some people without symptoms may be able to spread the virus.</p>
+            <!--<a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" class="btn">learn more</a>-->
+        </div>
+
+    </div>
+
+</section>
+<!-- protection section ends -->
+
+<!-- symtoms section starts  -->
+
+<section class="symtoms" id="symtoms" style="padding-top: 0rem;">
+
+    <div class="content">
+        <h1 class="heading">What Are The Main <span>Symptoms?</span></h1>
+        <p style="line-height:4rem;">Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. However, some will become seriously ill and require medical attention.</p>
+        <p style="color:#666">Following are the symptoms of Covid 19 and Pneumonia,</p>
+        
+        <ul>
+            <div class="one" >
+                <p style="color:#666">Most common symptoms:</p>
+                <li>Fever and couph</li>
+                <li>Tiredness</li>
+                <li>Loss of taste and smell</li>
+                
+            </div>
+            <div class="two">
+                <p style="color:#666">Serious symptoms:</p>
+                <li>Loss of speech or mobility, or confusion </li>            
+                <li>Chest pain</li>
+                <li>Shortness of Breath</li>
+                
+            </div>
+        </ul>
+        <p>Seek immediate medical attention if you have serious symptoms.</p>
+        <p>People with mild symptoms who are otherwise healthy should manage their symptoms at home.</P>
+     <!--   <a href="#" class="btn">know more</a>-->
+    </div>
+
+    <div class="image">
+        <img src="../static/image/symptoms.jpg" alt="">
+    </div>
+
+</section>
+
+<!-- symtoms section ends -->
+
+<!-- prevent section starts  -->
+
+<section class="prevent" id="prevent">
+
+    <div class="row">
+
+        <div class="image">
+            <img src="../static/image/donts.jpg" alt="">
+        </div>
+
+        <div class="content" style="padding-left: 2rem">
+            <h1 class="heading1">Things <span>not to do</span> during Covid 19 and Pneumonia</h1>
+            <ul>
+                <li>Do not share eating</li>
+                <li>Do not touch your face or nose</li>
+                <li>Do not contact sick people</li>
+                <li>Don’t overstock medicines</li>
+                <li>Avoid areas where the air may not be clean</li>
+                <li>Do not smoke</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="content">
+            <h1 class="heading1">Things <span>to do</span> during Covid 19 and Pneumonia</h1>
+            <ul>
+                <li>Wash your hands for 20 sec</li>
+                <li>Wear a mask if available</li>
+                <li>Seek medical care regularly</li>
+                <li>Separate yourself from others</li>
+                <li>Drink warm beverages</li>
+                <li>Take rest, antibiotics, and increased fluid intake.</li>
+            </ul>
+        </div>
+
+        <div class="image">
+            <img src="../static/image/dos.jpg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- prevent section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+       <!-- <div class="box">
+            <h3>Services</h3>
+            <a href="#">Register</a>
+            <a href="#">Know about doctors</a>
+            <a href="#">Book slot</a>
+            <a href="#">Manage appointment</a>
+            <a href="#">services available</a>
+            
+        </div>
+
+        <div class="box">
+            <h3>Resources</h3>
+            <a href="#">How to detect</a>
+            <a href="#">Dos and dont's</a>
+            <a href="#">overview</a>
+            <a href="#">Guidelines</a>
+            <a href="#">centers</a>
+            
+        </div>-->
+
+        <div class="box" style="margin-left:400px;">
+            <h3>Quick Links</h3>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="#protect">Protection</a>
+            <a href="#symtoms">Symptoms</a>
+            <a href="#prevent">Prevent</a>
+            
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <p> <i class="fas fa-phone"></i> +918861826144. </p>
+            <p> <i class="fas fa-envelope"></i> covid19protection@gmail.com </p>
+            <p> <i class="fas fa-map-marker-alt"></i> Puttur, India - 574203. </p>
+          <!--  <div class="share">
+                <a href="#" class="fab fa-youtube"></a>
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>-->
+        </div>
+
+    </div>
+
+    <p class="credit"> Copyright &#169; 2022 Stay safe. All rights reserved</p>
+
+</section>
+
+<!-- footer section ends -->   
+    
+
+
+</body>
