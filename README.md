@@ -1,1 +1,1 @@
-# Covid19_and_Pneumonia_Detection
+# Detection of Covid19 and Pneumonia from Chest X-ray images using CNN is a web application where the Radiologist can upload patient Chest X-ray image and will get to know about whether patient is affected by Covid19 or Pneumonia or he is healthier. This system is time saving and also reduces the spreadding of disease due to crowdness in hospitals during pandemic.
