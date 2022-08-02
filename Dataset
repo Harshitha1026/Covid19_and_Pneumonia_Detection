@@ -1,0 +1,4 @@
+The dataset is collected from Kaggle website. The link is given below,
+https://www.kaggle.com/datasets/preetviradiya/covid19-radiography-dataset
+
+In this dataset, 3615 Covid-19 affected Chest X-ray images, 10192 Normal Chest X-ray images and 1346 Vira Pneumonia affected Chest X-ray images is used for building the model.
